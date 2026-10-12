@@ -46,8 +46,9 @@
   .top { position: fixed; inset: 0 0 auto; z-index: 40; padding-top: env(safe-area-inset-top, 0px); border-top: 3px solid var(--mint); transition: background .3s; }
   .top.solid { background: rgba(13, 20, 23, .86); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
   .top .wrap { height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-family: var(--display); font-size: 18px; font-weight: 500; letter-spacing: .06em; }
-  .brand b { color: var(--mint); font-weight: 600; }
+  .brand { display: flex; align-items: center; text-decoration: none; }
+  .brand img { height: 56px; width: auto; }
+  @media (max-width: 480px) { .brand img { height: 38px; } }
   .nav { display: flex; align-items: center; gap: 34px; font-family: var(--display); font-size: 13px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; }
   .nav a:not(.btn) { text-decoration: none; color: var(--soft); transition: color .2s; }
   .nav a:not(.btn):hover { color: var(--mint); }
@@ -59,12 +60,10 @@
   #terrain { position: absolute; inset: 0; width: 100%; height: 100%; }
   .hero .wrap { position: relative; z-index: 2; height: 100%; display: grid; grid-template-rows: 1fr auto; padding-top: 130px; }
   .hero-main { display: grid; grid-template-columns: 1.4fr minmax(320px, .6fr); gap: 40px; align-content: start; }
-  .hero h1 { font-size: clamp(32px, 4.7vw, 68px); font-weight: 500; text-transform: uppercase; line-height: 1.04; margin-top: 18px; }
+  .hero h1 { font-size: clamp(34px, 5vw, 74px); font-weight: 500; text-transform: uppercase; line-height: 1.04; margin-top: 18px; }
   .hero h1 .l { display: flex; flex-wrap: wrap; align-items: center; gap: .22em; }
   .hero h1 .s { color: var(--sand); }
   .hero h1 .m { color: var(--mint); }
-  .pill { display: inline-block; width: 2.1em; height: .82em; border-radius: 999px; overflow: hidden; vertical-align: middle; box-shadow: 0 0 0 1px var(--line2); }
-  .pill img { width: 100%; height: 100%; object-fit: cover; }
   .hero-side { align-self: end; padding-bottom: 8px; display: grid; gap: 26px; }
   .hero-side p { font-size: 17px; color: var(--soft); max-width: 40ch; }
   .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -195,8 +194,11 @@
   @media (max-width: 480px) { .row2 { grid-template-columns: 1fr; } }
 
   footer { border-top: 1px solid var(--line); font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-block: 26px; }
-  footer b { color: var(--text); font-weight: 500; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 28px; padding-block: 30px; }
+  footer .foot-logo { height: 40px; width: auto; }
+  .foot-links { display: flex; gap: 22px; }
+  .foot-links a { text-decoration: none; color: var(--soft); }
+  .foot-links a:hover { color: var(--mint); }
 
   .js .rv { opacity: 0; transform: translateY(30px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
   .js .rv.in { opacity: 1; transform: none; }

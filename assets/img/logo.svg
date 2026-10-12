@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 150" role="img" aria-label="Arzelan Geo">
+  <g fill="none" stroke="#17385C" stroke-width="2.6">
+    <circle cx="75" cy="75" r="52"/>
+    <path d="M75 5v140M5 75h140"/>
+  </g>
+  <circle cx="75" cy="75" r="7.5" fill="#3FA66B"/>
+  <text x="163" y="97" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif" font-size="60" fill="#17385C" textLength="245" lengthAdjust="spacingAndGlyphs">ARZELAN</text>
+  <text x="420" y="97" font-family="Arial, Helvetica, 'Liberation Sans', sans-serif" font-size="60" font-weight="700" fill="#3FA66B" textLength="123" lengthAdjust="spacingAndGlyphs">GEO</text>
+</svg>
