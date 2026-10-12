@@ -1,0 +1,14 @@
+# Dependencias de Node (se reinstalan con npm install)
+node_modules/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Registros
+npm-debug.log*
+
+# Archivos temporales del editor
+*.swp
+*.tmp

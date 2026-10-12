@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Arzelan Geo Â· Relevamientos, geoespacial e ingenierÃ­a Â· Salta</title>
+  <meta name="description" content="Integramos relevamientos, tecnologÃ­a geoespacial e ingenierÃ­a aplicada para acompaÃ±ar proyectos desde el anÃ¡lisis del terreno hasta la toma de decisiones tÃ©cnicas. Salta, Argentina.">
+  <meta name="theme-color" content="#0D1417">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arzelan Geo Â· Entendemos el territorio. Desarrollamos soluciones.">
+  <meta property="og:description" content="Relevamientos con dron y GNSS, modelos 3D e ingenierÃ­a del agua en Salta, Argentina.">
+  <meta property="og:image" content="assets/img/modelo-fondo.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' rx='10' fill='%230D1417'/%3E%3Ccircle cx='22' cy='22' r='12' fill='none' stroke='%23E8EEEC' stroke-width='2.5'/%3E%3Cpath d='M22 5v34M5 22h34' stroke='%23E8EEEC' stroke-width='2.5'/%3E%3Ccircle cx='22' cy='22' r='4' fill='%23A8F0C0'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="cross" viewBox="0 0 44 44"><circle cx="22" cy="22" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M22 2v40M2 22h40" stroke="currentColor" stroke-width="2"/><circle cx="22" cy="22" r="4.5" fill="#A8F0C0"/></symbol>
+    <symbol id="arrow" viewBox="0 0 20 20"><path d="M3 10h12M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Arzelan Geo, inicio">
+      <svg width="34" height="34" style="color:#E8EEEC" aria-hidden="true"><use href="#cross"/></svg>
+      <span>ARZELAN<b>GEO</b></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#servicios">Qué hacemos</a>
+      <a href="#diferencial">Diferencial</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#equipo">Equipo</a>
+      <a class="btn solid" href="#contacto">Contacto <svg width="16" height="16"><use href="#arrow"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="h1">
+    <canvas id="terrain" aria-hidden="true"></canvas>
+    <div class="hud alt" aria-hidden="true">ALT [ <b id="alt">1.312</b> ] m</div>
+    <div class="hud coord" aria-hidden="true">24°47′ S · 65°25′ O · <b>SALTA</b></div>
+    <div class="hud grid" aria-hidden="true"><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
+
+    <div class="wrap">
+      <div class="hero-main">
+        <div>
+          <span class="tag">Relevamientos · Geoespacial · Ingeniería</span>
+          <h1 id="h1">
+            <span class="l"><span class="s">Entendemos</span> <span class="pill"><img src="assets/img/dron-base.jpg" alt=""></span></span>
+            <span class="l">el <span class="m">territorio.</span></span>
+            <span class="l"><span class="s">Desarrollamos</span></span>
+            <span class="l"><span class="m">soluciones.</span> <span class="pill"><img src="assets/img/modelo-fondo.jpg" alt=""></span></span>
+          </h1>
+        </div>
+        <div class="hero-side">
+          <p>Integramos relevamientos, tecnología geoespacial e ingeniería aplicada para acompañar proyectos desde el análisis del terreno hasta la toma de decisiones técnicas.</p>
+          <div class="hero-actions">
+            <a class="btn solid" href="#servicios">Conocé nuestras soluciones <svg width="16" height="16"><use href="#arrow"/></svg></a>
+            <a class="btn ghost" href="#contacto">Hablemos de tu proyecto</a>
+          </div>
+        </div>
+      </div>
+      <nav class="svc-bar" aria-label="Servicios">
+        <span class="lbl">SERVICIOS :</span>
+        <a href="#s1">Obras</a><a href="#s2">Geoespacial</a><a href="#s3">Ingeniería del agua</a><a href="#s4">Agro</a><a href="#s5">Propiedades</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- MANIFIESTO -->
+  <section class="manifesto" aria-label="Quiénes somos">
+    <div class="wrap">
+      <span class="tag dim rv">[ 01 ] Arzelan Geo</span>
+      <div>
+        <p class="big rv">Convertimos el terreno en <span class="m">información confiable</span> y esa información en <span class="s">decisiones técnicas</span>. Para que cada proyecto avance con certeza, desde el primer punto medido.</p>
+        <div class="stats rv">
+          <div class="stat"><b data-to="10"><i>+</i>10</b><span>años de experiencia</span></div>
+          <div class="stat"><b data-to="12" data-plain>12</b><span>países</span></div>
+          <div class="stat"><b data-to="45"><i>+</i>45</b><span>proyectos</span></div>
+          <p class="fine">Trayectoria profesional del equipo fundador en topografía, minería e ingeniería hidráulica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ HACEMOS -->
+  <section id="servicios" class="services" aria-labelledby="h-svc">
+    <div class="wrap">
+      <div class="sec-top rv">
+        <div><span class="tag">[ 02 ] Qué hacemos</span><h2 id="h-svc" class="h2" style="margin-top:18px">Más que <span class="m">medir.</span></h2></div>
+        <p>Cada servicio parte de una medición propia del terreno y termina en un resultado útil para diseñar, planificar o ejecutar.</p>
+      </div>
+      <div class="rows">
+        <article class="row rv" id="s1"><span class="k">/01</span><h3>Obras</h3><ul><li>Plani-altimetría</li><li>Replanteo</li><li>Movimiento de suelo</li><li>Control de avance</li></ul><div class="thumb"><img src="assets/img/modelo-calle.jpg" alt="" loading="lazy"></div></article>
+        <article class="row rv" id="s2"><span class="k">/02</span><h3>Geoespacial</h3><ul><li>Fotogrametría con dron</li><li>GNSS / RTK</li><li>Modelos de elevación</li><li>GIS</li></ul><div class="thumb"><img src="assets/img/dron-base.jpg" alt="" loading="lazy"></div></article>
+        <article class="row rv" id="s3"><span class="k">/03</span><h3>Ingeniería del agua</h3><ul><li>Hidrología</li><li>Hidráulica</li><li>Drenaje pluvial</li><li>Canales</li><li>Redes de agua</li></ul><div class="thumb"><img src="assets/img/canal-desvio.jpg" alt="" loading="lazy"></div></article>
+        <article class="row rv" id="s4"><span class="k">/04</span><h3>Agro</h3><ul><li>Sistematización de campos</li><li>Diseño de riego</li><li>Control de erosión</li></ul><div class="thumb"><video autoplay muted loop playsinline aria-hidden="true"><source src="assets/video/agro.mp4" type="video/mp4"></video></div></article>
+        <article class="row rv" id="s5"><span class="k">/05</span><h3>Propiedades</h3><ul><li>Mensuras</li><li>Subdivisiones y loteos</li><li>Prescripción adquisitiva</li><li>Amojonamientos</li></ul><div class="thumb"><img src="assets/img/lote-gnss.jpg" alt="" loading="lazy"></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAL -->
+  <section id="diferencial" class="diff" aria-labelledby="h-diff">
+    <div class="wrap">
+      <span class="tag rv">[ 03 ] Nuestro diferencial</span>
+      <h2 id="h-diff" class="eq rv" style="margin-top:22px"><span class="s">Territorio</span> <span class="plus">+</span> <span class="m">Ingeniería</span></h2>
+      <div class="diff-grid">
+        <figure class="viewer rv" style="margin:0">
+          <video autoplay muted loop playsinline aria-label="Modelo 3D del terreno con la implantación y el movimiento de suelo"><source src="assets/video/modelo.mp4" type="video/mp4"></video>
+          <div class="scan" aria-hidden="true"></div>
+          <i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i>
+          <div class="vhud" aria-hidden="true"><span>● Modelo 3D en vivo</span><span>Corte · Relleno · Implantación</span></div>
+        </figure>
+        <div class="diff-copy rv">
+          <h3>Del dato a la solución técnica.</h3>
+          <p>No nos quedamos únicamente con el relevamiento. Integramos información del terreno, análisis técnico e ingeniería para acompañar decisiones de diseño, planificación y ejecución.</p>
+          <div class="flow">
+            <div><span>01</span><p><b>Relevar</b><small>Dron y GNSS RTK sobre punto fijo.</small></p></div>
+            <div><span>02</span><p><b>Analizar</b><small>Modelo 3D, volúmenes, cuencas y caudales.</small></p></div>
+            <div><span>03</span><p><b>Resolver</b><small>Drenaje, taludes y fundaciones definidos.</small></p></div>
+          </div>
+          <div class="truth" aria-label="Cada dato se identifica como medido, interpolado o supuesto"><span class="a">Medido</span><span class="b">Interpolado</span><span class="c">Supuesto</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTO -->
+  <section id="proyectos" class="project" aria-labelledby="h-pro">
+    <div class="wrap">
+      <div class="sec-top rv">
+        <div><span class="tag">[ 04 ] Proyectos destacados</span><h2 id="h-pro" class="h2" style="margin-top:18px">Caso de <span class="s">aplicación.</span></h2></div>
+      </div>
+      <article class="case rv">
+        <div class="media"><img src="assets/img/modelo-fondo.jpg" alt="Modelo 3D de una vivienda implantada sobre el terreno relevado" loading="lazy"></div>
+        <div class="info">
+          <span class="tag dim">Vivienda unifamiliar en ladera · Salta</span>
+          <h3>Todo definido antes de empezar la obra.</h3>
+          <p>Relevamiento, modelado y solución técnica sobre el terreno real, con obras listas para cotizar.</p>
+          <ol><li>Relevamiento</li><li>Modelo 3D</li><li>Drenaje</li><li>Fundaciones</li></ol>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section id="equipo" class="team" aria-labelledby="h-team">
+    <div class="wrap">
+      <span class="tag rv">[ 05 ]</span>
+      <h2 id="h-team" class="h2 rv" style="margin-top:18px">El <span class="m">equipo.</span></h2>
+      <div class="people">
+        <article class="person rv"><span class="ini">FA</span><span class="role">Dirección técnica</span><h3>Facundo Arzelán Visuara</h3><p>Agrimensura y topografía. Relevamientos para minería de litio en salares de la Puna.</p></article>
+        <article class="person rv"><span class="ini">FM</span><span class="role">Ingeniería de proyectos</span><h3>Francisco J. Moyano Videla</h3><p>Ingeniero civil en hidrología e hidráulica. Más de 10 años en proyectos internacionales.</p></article>
+        <article class="person rv"><span class="ini">FV</span><span class="role">Dirección comercial</span><h3>Felipe Vargas</h3><p>Primer contacto con cada cliente y acompañamiento durante todo el proyecto.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact" aria-labelledby="h-cta">
+    <canvas id="terrain2" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="rv">
+        <span class="tag">[ 06 ] Contacto</span>
+        <h2 id="h-cta" class="h2" style="margin-top:18px">Tu proyecto, <span class="m">sobre bases firmes.</span></h2>
+        <p class="lead">Compartinos la ubicación del terreno y la idea de tu proyecto. Te enviamos una propuesta con el alcance, los plazos y los entregables definidos desde el inicio.</p>
+        <div class="direct">
+          <a href="https://wa.me/5493516080376" target="_blank" rel="noopener"><small>WhatsApp</small>+54 9 3516 080376</a>
+          <a href="https://www.instagram.com/arzelangeo/" target="_blank" rel="noopener"><small>Instagram</small>@arzelangeo</a>
+          <span><small>Base</small>Salta, Argentina</span>
+        </div>
+      </div>
+      <form id="f" class="rv" novalidate>
+        <h3>Pedí tu propuesta</h3>
+        <div class="row2">
+          <label for="f-name">Nombre<input id="f-name" name="name" autocomplete="name" placeholder="Tu nombre"></label>
+          <label for="f-place">Ubicación<input id="f-place" name="place" placeholder="Ej. San Lorenzo, Salta"></label>
+        </div>
+        <label for="f-svc">Servicio
+          <select id="f-svc" name="svc">
+            <option>Obras · topografía y movimiento de suelo</option>
+            <option>Geoespacial · dron, GNSS, GIS</option>
+            <option>Ingeniería del agua · drenaje y canales</option>
+            <option>Agro · sistematización y riego</option>
+            <option>Propiedades · mensura y loteo</option>
+            <option>Todavía no lo sé</option>
+          </select>
+        </label>
+        <label for="f-msg">Tu proyecto<textarea id="f-msg" name="msg" placeholder="Contanos brevemente qué querés hacer"></textarea></label>
+        <a class="btn solid" id="f-send" href="https://wa.me/5493516080376" target="_blank" rel="noopener">Enviar por WhatsApp <svg width="16" height="16"><use href="#arrow"/></svg></a>
+        <p class="note">Se abre WhatsApp con tu mensaje armado, listo para enviar.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span><b>ARZELAN GEO</b> · Precisión que impulsa proyectos</span><span>Salta · Argentina</span></div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
