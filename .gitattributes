@@ -1,0 +1,8 @@
+# Finales de línea consistentes en todos los equipos
+* text=auto eol=lf
+
+# Archivos binarios
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.mp4 binary
