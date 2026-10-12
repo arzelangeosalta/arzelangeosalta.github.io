@@ -3,88 +3,131 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Arzelan Geo · Relevamientos, geoespacial e ingeniería · Salta</title>
-  <meta name="description" content="Integramos relevamientos, tecnología geoespacial e ingeniería aplicada para acompañar proyectos desde el análisis del terreno hasta la toma de decisiones técnicas. Salta, Argentina.">
-  <meta name="theme-color" content="#0D1417">
+  <title>Arzelan Geo · Agrimensura, topografía e ingeniería · Salta</title>
+  <meta name="description" content="Medimos tu terreno con precisión y lo convertimos en decisiones claras. Agrimensura, topografía, tecnología geoespacial e ingeniería en Salta, Argentina.">
+  <meta name="theme-color" content="#163A5F">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Arzelan Geo · Entendemos el territorio. Desarrollamos soluciones.">
-  <meta property="og:description" content="Relevamientos con dron y GNSS, modelos 3D e ingeniería del agua en Salta, Argentina.">
+  <meta property="og:description" content="Agrimensura, topografía, tecnología geoespacial e ingeniería en Salta, Argentina.">
   <meta property="og:image" content="assets/img/modelo-fondo.jpg">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <script>
+    // Tema, idioma e intro antes de pintar, para evitar parpadeos
+    (function () {
+      var d = document.documentElement, t = null, l = null, seen = null;
+      try { t = localStorage.getItem('ag-theme'); l = localStorage.getItem('ag-lang'); seen = sessionStorage.getItem('ag-intro'); } catch (e) {}
+      if (t) d.setAttribute('data-theme', t);
+      if (l === 'en') d.setAttribute('lang', 'en');
+      if (!seen && !matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('intro');
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="cross" viewBox="0 0 44 44"><circle cx="22" cy="22" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M22 2v40M2 22h40" stroke="currentColor" stroke-width="2"/><circle cx="22" cy="22" r="4.5" fill="#A8F0C0"/></symbol>
-    <symbol id="arrow" viewBox="0 0 20 20"><path d="M3 10h12M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="iso" viewBox="0 0 150 150">
+      <circle cx="75" cy="75" r="52" fill="none" stroke="currentColor" stroke-width="5"/>
+      <path d="M75 5v140M5 75h140" stroke="currentColor" stroke-width="5"/>
+      <circle cx="75" cy="75" r="11" fill="#3FA66A"/>
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 20 20"><path d="M3 10h12M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.3c-2.1 0-4.1-.6-5.9-1.7l-.4-.2-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.5-11 10.5zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.8.6-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.2-.3-.3-.6-.4z"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <path id="ct" fill="none" d="M-60,0 C140,-50 300,60 520,16 S880,-70 1500,8"/>
   </defs>
 </svg>
 
+<!-- INTRO -->
+<div id="intro" aria-hidden="true">
+  <svg class="intro-mark" viewBox="0 0 150 150">
+    <circle class="i-c" cx="75" cy="75" r="52" pathLength="1"/>
+    <path class="i-v" d="M75 5v140" pathLength="1"/>
+    <path class="i-h" d="M5 75h140" pathLength="1"/>
+    <circle class="i-d" cx="75" cy="75" r="11"/>
+  </svg>
+  <div class="intro-read"><span>24°47′ S</span><span>65°25′ O</span><span class="ok">● FIX RTK</span></div>
+</div>
+
+<a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
 <header class="top" id="top">
   <div class="wrap">
-    <a class="brand" href="#inicio" aria-label="Arzelan Geo, inicio">
-      <img src="assets/img/logo-claro.svg" alt="Arzelan Geo" width="176" height="48">
+    <a class="brand" href="#inicio" aria-label="Arzelan Geo">
+      <svg class="logo" viewBox="0 0 770 150" aria-hidden="true">
+        <use href="#iso" width="150" height="150"/>
+        <text x="172" y="100"><tspan class="w1">ARZELAN</tspan><tspan class="w2" dx="16">GEO</tspan></text>
+      </svg>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="#servicios">Qué hacemos</a>
-      <a href="#diferencial">Diferencial</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#equipo">Equipo</a>
-      <a class="btn solid" href="#contacto">Contacto <svg width="16" height="16"><use href="#arrow"/></svg></a>
+      <a href="#servicios" data-i18n="nav.svc">Qué hacemos</a>
+      <a href="#diferencial" data-i18n="nav.diff">Diferencial</a>
+      <a href="#proyectos" data-i18n="nav.pro">Proyectos</a>
+      <a href="#equipo" data-i18n="nav.team">Equipo</a>
     </nav>
+    <div class="tools">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="theme" id="theme" aria-label="Modo nocturno">
+        <svg class="i-moon" width="18" height="18"><use href="#moon"/></svg>
+        <svg class="i-sun" width="18" height="18"><use href="#sun"/></svg>
+      </button>
+      <a class="btn sm" href="#contacto"><span data-i18n="nav.cta">Contacto</span> <svg width="15" height="15"><use href="#arrow"/></svg></a>
+    </div>
   </div>
 </header>
 
 <main id="inicio">
   <!-- HERO -->
-  <section class="hero" aria-labelledby="h1">
+  <section class="hero" id="hero" aria-labelledby="h1">
     <canvas id="terrain" aria-hidden="true"></canvas>
-    <div class="hud alt" aria-hidden="true">ALT [ <b id="alt">1.312</b> ] m</div>
-    <div class="hud coord" aria-hidden="true">24°47′ S · 65°25′ O · <b>SALTA</b></div>
-    <div class="hud grid" aria-hidden="true"><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="reticle" id="reticle" aria-hidden="true"><i></i><span id="ret-txt">24°47′12″ S · 65°25′08″ O</span></div>
+    <div class="hud left" aria-hidden="true">ALT <b id="alt">1.312</b> m · PREC <b>±2 cm</b></div>
 
-    <div class="wrap">
-      <div class="hero-main">
-        <div>
-          <span class="tag">Relevamientos · Geoespacial · Ingeniería</span>
-          <h1 id="h1">
-            <span class="l"><span class="s">Entendemos</span></span>
-            <span class="l">el <span class="m">territorio.</span></span>
-            <span class="l"><span class="s">Desarrollamos</span></span>
-            <span class="l"><span class="m">soluciones.</span></span>
-          </h1>
-        </div>
-        <div class="hero-side">
-          <p>Integramos relevamientos, tecnología geoespacial e ingeniería aplicada para acompañar proyectos desde el análisis del terreno hasta la toma de decisiones técnicas.</p>
-          <div class="hero-actions">
-            <a class="btn solid" href="#servicios">Conocé nuestras soluciones <svg width="16" height="16"><use href="#arrow"/></svg></a>
-            <a class="btn ghost" href="#contacto">Hablemos de tu proyecto</a>
-          </div>
+    <div class="wrap hero-in" id="contenido">
+      <span class="eyebrow light" data-i18n="hero.eyebrow">Agrimensura · Topografía · Ingeniería · Salta</span>
+      <h1 id="h1">
+        <span class="ln"><span data-i18n="hero.l1">Entendemos</span></span>
+        <span class="ln"><span data-i18n-html="hero.l2">el <em>territorio.</em></span></span>
+        <span class="ln"><span data-i18n="hero.l3">Desarrollamos</span></span>
+        <span class="ln"><span data-i18n-html="hero.l4"><em>soluciones.</em></span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-sub" data-i18n="hero.sub">Medimos tu terreno con precisión y lo convertimos en decisiones claras. Relevamientos, tecnología geoespacial e ingeniería aplicada, con un equipo que te acompaña de principio a fin.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#servicios"><span data-i18n="hero.cta1">Conocé nuestras soluciones</span> <svg width="16" height="16"><use href="#arrow"/></svg></a>
+          <a class="btn ghost" href="#contacto" data-i18n="hero.cta2">Hablemos de tu proyecto</a>
         </div>
       </div>
-      <nav class="svc-bar" aria-label="Servicios">
-        <span class="lbl">SERVICIOS :</span>
-        <a href="#s1">Obras</a><a href="#s2">Geoespacial</a><a href="#s3">Ingeniería del agua</a><a href="#s4">Agro</a><a href="#s5">Propiedades</a>
-      </nav>
     </div>
+    <a class="scroll" href="#manifiesto" aria-label="Bajar"><span></span></a>
   </section>
 
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span data-i18n="mq">Agrimensura ◉ Topografía ◉ Fotogrametría con dron ◉ GNSS RTK ◉ Modelos 3D ◉ Hidrología ◉ Drenaje ◉ Agro ◉</span>
+      <span data-i18n="mq">Agrimensura ◉ Topografía ◉ Fotogrametría con dron ◉ GNSS RTK ◉ Modelos 3D ◉ Hidrología ◉ Drenaje ◉ Agro ◉</span>
+    </div>
+  </div>
+
   <!-- MANIFIESTO -->
-  <section class="manifesto" aria-label="Quiénes somos">
+  <section class="manifesto" id="manifiesto" aria-label="Arzelan Geo">
     <div class="wrap">
-      <span class="tag dim rv">[ 01 ] Arzelan Geo</span>
-      <div>
-        <p class="big rv">Convertimos el terreno en <span class="m">información confiable</span> y esa información en <span class="s">decisiones técnicas</span>. Para que cada proyecto avance con certeza, desde el primer punto medido.</p>
-        <div class="stats rv">
-          <div class="stat"><b data-to="10"><i>+</i>10</b><span>años de experiencia</span></div>
-          <div class="stat"><b data-to="12" data-plain>12</b><span>países</span></div>
-          <div class="stat"><b data-to="45"><i>+</i>45</b><span>proyectos</span></div>
-          <p class="fine">Trayectoria profesional del equipo fundador en topografía, minería e ingeniería hidráulica.</p>
-        </div>
+      <span class="eyebrow rv" data-i18n="man.tag">Quiénes somos</span>
+      <p class="big rv" data-i18n-html="man.text">Detrás de cada obra hay un terreno que conocer. <em>Lo medimos, lo entendemos y te lo explicamos en simple</em>, para que decidas con datos reales y sin sorpresas.</p>
+      <div class="stats rv">
+        <div class="stat"><b data-to="10">+10</b><span data-i18n="st.1">años de experiencia</span></div>
+        <div class="stat"><b data-to="12" data-plain>12</b><span data-i18n="st.2">países</span></div>
+        <div class="stat"><b data-to="45">+45</b><span data-i18n="st.3">proyectos</span></div>
+        <p class="fine" data-i18n="st.note">Trayectoria profesional del equipo fundador en agrimensura, minería e ingeniería hidráulica.</p>
       </div>
     </div>
   </section>
@@ -93,41 +136,90 @@
   <section id="servicios" class="services" aria-labelledby="h-svc">
     <div class="wrap">
       <div class="sec-top rv">
-        <div><span class="tag">[ 02 ] Qué hacemos</span><h2 id="h-svc" class="h2" style="margin-top:18px">Más que <span class="m">medir.</span></h2></div>
-        <p>Cada servicio parte de una medición propia del terreno y termina en un resultado útil para diseñar, planificar o ejecutar.</p>
+        <div>
+          <span class="eyebrow" data-i18n="svc.tag">Qué hacemos</span>
+          <h2 id="h-svc" data-i18n-html="svc.title">Más que <em>medir.</em></h2>
+        </div>
+        <p data-i18n="svc.lead">Cada servicio arranca en el campo y termina en algo que podés usar: un plano, un modelo o una solución lista para ejecutar.</p>
       </div>
-      <div class="rows">
-        <article class="row rv" id="s1"><span class="k">/01</span><h3>Obras</h3><ul><li>Plani-altimetría</li><li>Replanteo</li><li>Movimiento de suelo</li><li>Control de avance</li></ul><div class="thumb"><img src="assets/img/modelo-calle.jpg" alt="" loading="lazy"></div></article>
-        <article class="row rv" id="s2"><span class="k">/02</span><h3>Geoespacial</h3><ul><li>Fotogrametría con dron</li><li>GNSS / RTK</li><li>Modelos de elevación</li><li>GIS</li></ul><div class="thumb"><img src="assets/img/dron-base.jpg" alt="" loading="lazy"></div></article>
-        <article class="row rv" id="s3"><span class="k">/03</span><h3>Ingeniería del agua</h3><ul><li>Hidrología</li><li>Hidráulica</li><li>Drenaje pluvial</li><li>Canales</li><li>Redes de agua</li></ul><div class="thumb"><img src="assets/img/canal-desvio.jpg" alt="" loading="lazy"></div></article>
-        <article class="row rv" id="s4"><span class="k">/04</span><h3>Agro</h3><ul><li>Sistematización de campos</li><li>Diseño de riego</li><li>Control de erosión</li></ul><div class="thumb"><video autoplay muted loop playsinline aria-hidden="true"><source src="assets/video/agro.mp4" type="video/mp4"></video></div></article>
-        <article class="row rv" id="s5"><span class="k">/05</span><h3>Propiedades</h3><ul><li>Mensuras</li><li>Subdivisiones y loteos</li><li>Prescripción adquisitiva</li><li>Amojonamientos</li></ul><div class="thumb"><img src="assets/img/lote-gnss.jpg" alt="" loading="lazy"></div></article>
+      <div class="cards">
+        <article class="card rv">
+          <div class="media"><img src="assets/img/lote-gnss.jpg" alt="" loading="lazy"></div>
+          <div class="body"><span class="k">01</span><h3 data-i18n="s1.t">Agrimensura</h3><p data-i18n="s1.d">Seguridad jurídica y planificación del territorio.</p>
+          <ul><li data-i18n="s1.a">Mensuras</li><li data-i18n="s1.b">Subdivisiones y loteos</li><li data-i18n="s1.c">Prescripción adquisitiva</li><li data-i18n="s1.e">Amojonamientos</li></ul></div>
+        </article>
+        <article class="card rv">
+          <div class="media"><img src="assets/img/modelo-calle.jpg" alt="" loading="lazy"></div>
+          <div class="body"><span class="k">02</span><h3 data-i18n="s2.t">Topografía</h3><p data-i18n="s2.d">Información precisa para construir con confianza.</p>
+          <ul><li data-i18n="s2.a">Plani-altimetría</li><li data-i18n="s2.b">Replanteo de obra</li><li data-i18n="s2.c">Movimiento de suelos</li><li data-i18n="s2.e">Control de avance</li></ul></div>
+        </article>
+        <article class="card rv">
+          <div class="media"><img src="assets/img/dron-base.jpg" alt="" loading="lazy"></div>
+          <div class="body"><span class="k">03</span><h3 data-i18n="s3.t">Tecnología geoespacial</h3><p data-i18n="s3.d">Datos precisos para mejores decisiones.</p>
+          <ul><li data-i18n="s3.a">Fotogrametría con dron</li><li data-i18n="s3.b">GNSS RTK</li><li data-i18n="s3.c">Modelos 3D</li><li data-i18n="s3.e">GIS</li></ul></div>
+        </article>
+        <article class="card rv">
+          <div class="media"><img src="assets/img/canal-desvio.jpg" alt="" loading="lazy"></div>
+          <div class="body"><span class="k">04</span><h3 data-i18n="s4.t">Ingeniería del agua</h3><p data-i18n="s4.d">El agua, bajo control antes de que sea un problema.</p>
+          <ul><li data-i18n="s4.a">Hidrología</li><li data-i18n="s4.b">Drenaje pluvial</li><li data-i18n="s4.c">Canales</li><li data-i18n="s4.e">Redes de agua</li></ul></div>
+        </article>
+        <article class="card rv">
+          <div class="media"><video autoplay muted loop playsinline aria-hidden="true"><source src="assets/video/agro.mp4" type="video/mp4"></video></div>
+          <div class="body"><span class="k">05</span><h3 data-i18n="s5.t">Agro</h3><p data-i18n="s5.d">Campos que rinden más, con cada gota en su lugar.</p>
+          <ul><li data-i18n="s5.a">Diseño de riego</li><li data-i18n="s5.b">Sistematización de campos</li><li data-i18n="s5.c">Control de erosión</li></ul></div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- DIFERENCIAL -->
   <section id="diferencial" class="diff" aria-labelledby="h-diff">
+    <svg class="contours" viewBox="0 0 1440 800" preserveAspectRatio="none" aria-hidden="true">
+      <use href="#ct" y="90"/><use href="#ct" y="140"/><use href="#ct" y="620"/><use href="#ct" y="680"/><use href="#ct" y="740"/>
+    </svg>
     <div class="wrap">
-      <span class="tag rv">[ 03 ] Nuestro diferencial</span>
-      <h2 id="h-diff" class="eq rv" style="margin-top:22px"><span class="s">Territorio</span> <span class="plus">+</span> <span class="m">Ingeniería</span></h2>
+      <span class="eyebrow light rv" data-i18n="dif.tag">Nuestro diferencial</span>
+      <h2 id="h-diff" class="eq rv"><span data-i18n="dif.a">Territorio</span> <i>+</i> <em data-i18n="dif.b">Ingeniería</em></h2>
       <div class="diff-grid">
-        <figure class="viewer rv" style="margin:0">
+        <figure class="viewer rv">
           <video autoplay muted loop playsinline aria-label="Modelo 3D del terreno con la implantación y el movimiento de suelo"><source src="assets/video/modelo.mp4" type="video/mp4"></video>
           <div class="scan" aria-hidden="true"></div>
-          <i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i>
-          <div class="vhud" aria-hidden="true"><span>● Modelo 3D en vivo</span><span>Corte · Relleno · Implantación</span></div>
+          <i class="cn c1"></i><i class="cn c2"></i><i class="cn c3"></i><i class="cn c4"></i>
+          <figcaption><span>● <span data-i18n="dif.live">Modelo 3D</span></span><span data-i18n="dif.cap">Corte · Relleno · Implantación</span></figcaption>
         </figure>
         <div class="diff-copy rv">
-          <h3>Del dato a la solución técnica.</h3>
-          <p>No nos quedamos únicamente con el relevamiento. Integramos información del terreno, análisis técnico e ingeniería para acompañar decisiones de diseño, planificación y ejecución.</p>
-          <div class="flow">
-            <div><span>01</span><p><b>Relevar</b><small>Dron y GNSS RTK sobre punto fijo.</small></p></div>
-            <div><span>02</span><p><b>Analizar</b><small>Modelo 3D, volúmenes, cuencas y caudales.</small></p></div>
-            <div><span>03</span><p><b>Resolver</b><small>Drenaje, taludes y fundaciones definidos.</small></p></div>
-          </div>
-          <div class="truth" aria-label="Cada dato se identifica como medido, interpolado o supuesto"><span class="a">Medido</span><span class="b">Interpolado</span><span class="c">Supuesto</span></div>
+          <h3 data-i18n="dif.h">Del dato a la solución técnica.</h3>
+          <p data-i18n="dif.p">No nos quedamos únicamente con el relevamiento. Integramos información del terreno, análisis técnico e ingeniería para acompañar decisiones de diseño, planificación y ejecución.</p>
+          <ol class="flow">
+            <li><b data-i18n="f1.t">Relevamos</b><span data-i18n="f1.d">Dron y GNSS RTK, referenciados a un punto fijo.</span></li>
+            <li><b data-i18n="f2.t">Analizamos</b><span data-i18n="f2.d">Modelo 3D, volúmenes, cuencas y caudales.</span></li>
+            <li><b data-i18n="f3.t">Resolvemos</b><span data-i18n="f3.d">Drenaje, taludes y fundaciones, listos para ejecutar.</span></li>
+          </ol>
+          <p class="truth"><span class="t m" data-i18n="tr.m">Medido</span><span class="t i" data-i18n="tr.i">Interpolado</span><span class="t s" data-i18n="tr.s">Supuesto</span><small data-i18n="tr.note">Cada dato que entregamos dice de dónde viene.</small></p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ -->
+  <section class="why" aria-labelledby="h-why">
+    <div class="wrap">
+      <div class="sec-top rv">
+        <div>
+          <span class="eyebrow" data-i18n="why.tag">Por qué elegirnos</span>
+          <h2 id="h-why" data-i18n-html="why.title">Precisión técnica, <em>trato cercano.</em></h2>
+        </div>
+      </div>
+      <div class="why-grid">
+        <div class="w rv"><b>01</b><h3 data-i18n="w1.t">Experiencia técnica</h3><p data-i18n="w1.d">Un equipo con años de campo en minería, obras e hidráulica.</p></div>
+        <div class="w rv"><b>02</b><h3 data-i18n="w2.t">Tecnología de precisión</h3><p data-i18n="w2.d">Dron, GNSS RTK y modelos 3D para ver el terreno como es.</p></div>
+        <div class="w rv"><b>03</b><h3 data-i18n="w3.t">Atención personalizada</h3><p data-i18n="w3.d">Hablás con quien mide y con quien diseña. Sin intermediarios.</p></div>
+        <div class="w rv"><b>04</b><h3 data-i18n="w4.t">Respuestas ágiles</h3><p data-i18n="w4.d">Propuestas claras y plazos que se cumplen.</p></div>
+        <div class="w rv"><b>05</b><h3 data-i18n="w5.t">Compromiso real</h3><p data-i18n="w5.d">Te acompañamos hasta que tu proyecto arranca.</p></div>
+      </div>
+      <div class="who rv">
+        <span data-i18n="who.tag">Acompañamos a</span>
+        <ul><li data-i18n="who.1">Constructoras</li><li data-i18n="who.2">Empresas mineras</li><li data-i18n="who.3">Desarrolladoras e inmobiliarias</li><li data-i18n="who.4">Productores agropecuarios</li><li data-i18n="who.5">Particulares</li></ul>
       </div>
     </div>
   </section>
@@ -136,15 +228,18 @@
   <section id="proyectos" class="project" aria-labelledby="h-pro">
     <div class="wrap">
       <div class="sec-top rv">
-        <div><span class="tag">[ 04 ] Proyectos destacados</span><h2 id="h-pro" class="h2" style="margin-top:18px">Caso de <span class="s">aplicación.</span></h2></div>
+        <div>
+          <span class="eyebrow" data-i18n="pro.tag">Proyectos destacados</span>
+          <h2 id="h-pro" data-i18n-html="pro.title">Caso de <em>aplicación.</em></h2>
+        </div>
       </div>
       <article class="case rv">
         <div class="media"><img src="assets/img/modelo-fondo.jpg" alt="Modelo 3D de una vivienda implantada sobre el terreno relevado" loading="lazy"></div>
         <div class="info">
-          <span class="tag dim">Vivienda unifamiliar en ladera · Salta</span>
-          <h3>Todo definido antes de empezar la obra.</h3>
-          <p>Relevamiento, modelado y solución técnica sobre el terreno real, con obras listas para cotizar.</p>
-          <ol><li>Relevamiento</li><li>Modelo 3D</li><li>Drenaje</li><li>Fundaciones</li></ol>
+          <span class="mono" data-i18n="pro.place">Vivienda unifamiliar en ladera · Salta</span>
+          <h3 data-i18n="pro.h">Todo definido antes de mover una máquina.</h3>
+          <p data-i18n="pro.p">Relevamos el lote, modelamos la casa sobre el terreno real y resolvimos drenaje, taludes y fundaciones. El cliente llegó a la obra con todo listo para cotizar.</p>
+          <ul class="chips"><li data-i18n="pc.1">Relevamiento</li><li data-i18n="pc.2">Modelo 3D</li><li data-i18n="pc.3">Drenaje</li><li data-i18n="pc.4">Fundaciones</li></ul>
         </div>
       </article>
     </div>
@@ -153,12 +248,12 @@
   <!-- EQUIPO -->
   <section id="equipo" class="team" aria-labelledby="h-team">
     <div class="wrap">
-      <span class="tag rv">[ 05 ]</span>
-      <h2 id="h-team" class="h2 rv" style="margin-top:18px">El <span class="m">equipo.</span></h2>
+      <span class="eyebrow rv" data-i18n="team.tag">Personas</span>
+      <h2 id="h-team" class="rv" data-i18n-html="team.title">El <em>equipo.</em></h2>
       <div class="people">
-        <article class="person rv"><span class="ini">FA</span><span class="role">Dirección técnica</span><h3>Facundo Arzelán Visuara</h3><p>Agrimensura y topografía. Relevamientos para minería de litio en salares de la Puna.</p></article>
-        <article class="person rv"><span class="ini">FM</span><span class="role">Ingeniería de proyectos</span><h3>Francisco J. Moyano Videla</h3><p>Ingeniero civil en hidrología e hidráulica. Más de 10 años en proyectos internacionales.</p></article>
-        <article class="person rv"><span class="ini">FV</span><span class="role">Dirección comercial</span><h3>Felipe Vargas</h3><p>Primer contacto con cada cliente y acompañamiento durante todo el proyecto.</p></article>
+        <article class="person rv"><svg class="p-iso" aria-hidden="true"><use href="#iso"/></svg><span class="role" data-i18n="p1.r">Dirección técnica</span><h3>Facundo Arzelán Visuara</h3><p data-i18n="p1.d">Agrimensura y topografía. Años de campo en relevamientos para minería de litio en la Puna.</p></article>
+        <article class="person rv"><svg class="p-iso" aria-hidden="true"><use href="#iso"/></svg><span class="role" data-i18n="p2.r">Ingeniería de proyectos</span><h3>Francisco J. Moyano Videla</h3><p data-i18n="p2.d">Ingeniero civil en hidrología e hidráulica, con más de 10 años en proyectos internacionales.</p></article>
+        <article class="person rv"><svg class="p-iso" aria-hidden="true"><use href="#iso"/></svg><span class="role" data-i18n="p3.r">Dirección comercial</span><h3>Felipe Vargas</h3><p data-i18n="p3.d">Tu primer contacto. Escucha lo que necesitás y te acompaña durante todo el proyecto.</p></article>
       </div>
     </div>
   </section>
@@ -168,36 +263,35 @@
     <canvas id="terrain2" aria-hidden="true"></canvas>
     <div class="wrap">
       <div class="rv">
-        <span class="tag">[ 06 ] Contacto</span>
-        <h2 id="h-cta" class="h2" style="margin-top:18px">Tu proyecto, <span class="m">sobre bases firmes.</span></h2>
-        <p class="lead">Compartinos la ubicación del terreno y la idea de tu proyecto. Te enviamos una propuesta con el alcance, los plazos y los entregables definidos desde el inicio.</p>
-        <div class="direct">
-          <a href="https://wa.me/5493516080376" target="_blank" rel="noopener"><small>WhatsApp</small>+54 9 3516 080376</a>
-          <a href="mailto:arzelangeosalta@gmail.com"><small>Correo</small>arzelangeosalta@gmail.com</a>
-          <a href="https://www.linkedin.com/company/135237581/" target="_blank" rel="noopener"><small>LinkedIn</small>Arzelan Geo</a>
-          <a href="https://www.instagram.com/arzelangeo/" target="_blank" rel="noopener"><small>Instagram</small>@arzelangeo</a>
-          <span><small>Base</small>Salta, Argentina</span>
-        </div>
+        <span class="eyebrow light" data-i18n="ct.tag">Contacto</span>
+        <h2 id="h-cta" data-i18n-html="ct.title">Tu proyecto, <em>sobre bases firmes.</em></h2>
+        <p class="lead" data-i18n="ct.lead">Contanos dónde está el terreno y qué tenés en mente. Te respondemos rápido, con una propuesta clara de alcance, plazos y entregables.</p>
+        <ul class="direct">
+          <li><small>WhatsApp</small><a href="https://wa.me/5493516080376" target="_blank" rel="noopener">+54 9 3516 080376</a></li>
+          <li><small data-i18n="ct.mail">Correo</small><a href="mailto:arzelangeosalta@gmail.com">arzelangeosalta@gmail.com</a></li>
+          <li><small>LinkedIn</small><a href="https://www.linkedin.com/company/135237581/" target="_blank" rel="noopener">Arzelan Geo</a></li>
+          <li><small>Instagram</small><a href="https://www.instagram.com/arzelangeo/" target="_blank" rel="noopener">@arzelangeo</a></li>
+        </ul>
       </div>
       <form id="f" class="rv" novalidate>
-        <h3>Pedí tu propuesta</h3>
+        <h3 data-i18n="fm.h">Pedí tu propuesta</h3>
         <div class="row2">
-          <label for="f-name">Nombre<input id="f-name" name="name" autocomplete="name" placeholder="Tu nombre"></label>
-          <label for="f-place">Ubicación<input id="f-place" name="place" placeholder="Ej. San Lorenzo, Salta"></label>
+          <label for="f-name"><span data-i18n="fm.name">Nombre</span><input id="f-name" autocomplete="name" data-i18n-ph="fm.name.ph" placeholder="Tu nombre"></label>
+          <label for="f-place"><span data-i18n="fm.place">Ubicación</span><input id="f-place" data-i18n-ph="fm.place.ph" placeholder="Ej. San Lorenzo, Salta"></label>
         </div>
-        <label for="f-svc">Servicio
-          <select id="f-svc" name="svc">
-            <option>Obras · topografía y movimiento de suelo</option>
-            <option>Geoespacial · dron, GNSS, GIS</option>
-            <option>Ingeniería del agua · drenaje y canales</option>
-            <option>Agro · sistematización y riego</option>
-            <option>Propiedades · mensura y loteo</option>
-            <option>Todavía no lo sé</option>
+        <label for="f-svc"><span data-i18n="fm.svc">Servicio</span>
+          <select id="f-svc">
+            <option data-i18n="s1.t">Agrimensura</option>
+            <option data-i18n="s2.t">Topografía</option>
+            <option data-i18n="s3.t">Tecnología geoespacial</option>
+            <option data-i18n="s4.t">Ingeniería del agua</option>
+            <option data-i18n="s5.t">Agro</option>
+            <option data-i18n="fm.unsure">Todavía no lo sé</option>
           </select>
         </label>
-        <label for="f-msg">Tu proyecto<textarea id="f-msg" name="msg" placeholder="Contanos brevemente qué querés hacer"></textarea></label>
-        <a class="btn solid" id="f-send" href="https://wa.me/5493516080376" target="_blank" rel="noopener">Enviar por WhatsApp <svg width="16" height="16"><use href="#arrow"/></svg></a>
-        <p class="note">Se abre WhatsApp con tu mensaje armado, listo para enviar.</p>
+        <label for="f-msg"><span data-i18n="fm.msg">Tu proyecto</span><textarea id="f-msg" data-i18n-ph="fm.msg.ph" placeholder="Contanos brevemente qué querés hacer"></textarea></label>
+        <a class="btn wa" id="f-send" href="https://wa.me/5493516080376" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#wa"/></svg><span data-i18n="fm.send">Enviar por WhatsApp</span></a>
+        <p class="note" data-i18n="fm.note">Se abre WhatsApp con tu mensaje listo para enviar.</p>
       </form>
     </div>
   </section>
@@ -205,16 +299,25 @@
 
 <footer>
   <div class="wrap">
-    <img class="foot-logo" src="assets/img/logo-claro.svg" alt="Arzelan Geo" width="147" height="40">
-    <span>Precisión que impulsa proyectos</span>
+    <svg class="logo foot" viewBox="0 0 770 150" aria-label="Arzelan Geo" role="img">
+        <use href="#iso" width="150" height="150"/>
+        <text x="172" y="100"><tspan class="w1">ARZELAN</tspan><tspan class="w2" dx="16">GEO</tspan></text>
+    </svg>
+    <span class="slogan" data-i18n-html="ft.slogan">Precisión que impulsa <em>proyectos.</em></span>
     <nav class="foot-links" aria-label="Redes">
       <a href="https://www.linkedin.com/company/135237581/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://www.instagram.com/arzelangeo/" target="_blank" rel="noopener">Instagram</a>
-      <a href="mailto:arzelangeosalta@gmail.com">Correo</a>
+      <a href="mailto:arzelangeosalta@gmail.com" data-i18n="ct.mail">Correo</a>
     </nav>
     <span>Salta · Argentina</span>
   </div>
 </footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a class="wa-float" href="https://wa.me/5493516080376?text=Hola%20Arzelan%20Geo%2C%20quiero%20consultar%20por%20un%20proyecto." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <span class="wa-tip" data-i18n="wa.tip">¿Hablamos?</span>
+  <span class="wa-btn"><svg width="30" height="30" aria-hidden="true"><use href="#wa"/></svg></span>
+</a>
 
 <script src="assets/js/main.js" defer></script>
 </body>
