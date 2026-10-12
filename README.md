@@ -37,10 +37,7 @@ git commit -m "Descripción corta del cambio"
 git push
 ```
 
-## Pendientes
+## Publicación
 
-- [ ] Correo institucional en la sección de contacto
-- [ ] Link oficial de LinkedIn
-- [ ] Fotos del equipo
-- [ ] Logo original en SVG
-- [ ] Confirmar volúmenes del caso de aplicación con Francisco
+El sitio se publica con GitHub Pages desde la rama `main`:
+**https://arzelangeosalta.github.io**
